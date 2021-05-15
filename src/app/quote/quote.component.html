@@ -5,9 +5,9 @@
       <label>Qoute:</label><h3>{{qoute.message}}</h3>
       <label>Publisher:</label><p>{{qoute.name}} </p>
       <label>Author:</label> <p>{{qoute.author}} </p>
-      <label>Date Published</label><p>{{qoute.publishDate}} </p>
-      <button (click)='deleteQuote()'>DELETE</button>
-      <app-quote-detail *ngIf='goal.showDescription' [goal]='goal' (isComplete) = 'completeGoal($event,i)'></app-quote-detail>
+<!--       <label>Date Published</label><p>{{qoute.publishDate}} </p>
+ -->      <button (click)='deleteQuote($event,i)'>DELETE</button>
+     <!--  <app-quote-detail *ngIf='goal.showDescription' [goal]='goal' (isComplete) = 'completeGoal($event,i)'></app-quote-detail> -->
     </div>
   </ul>
 <!-- <div class="container">
