@@ -1,4 +1,11 @@
-<div class="container">
+<h1>My Qoute</h1>
+<hr>
+  <ul>
+      <li *ngFor='let qoute of quotes'>
+    {{qoute.name}} 
+      </li>
+  </ul>
+<!-- <div class="container">
     <h1>Quotes</h1>
     <hr>
   
@@ -21,3 +28,4 @@
     </div>
     <p *ngIf='goals.length > 5'>You have too many goals</p>
   </div>
+ -->
