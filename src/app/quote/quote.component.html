@@ -11,9 +11,10 @@
               <label>Author:</label>{{qoute.author}}<br>
               <label>Date Published: </label>{{qoute.publishDate|date}} <br>
               <p>Upvote:</p>
-              <p>Downvote:</p>              
+              <p>Downvote:</p>  
+              <p>This quote was published {{qoute.publishDate|dateCount}} days ago</p>            
                   <button class="btn btn-outline-info">UPVOTE</button>
-                  <button class="btn btn-outline-secondary">DOWNVOTE</button>
+                  <button class="btn btn-outline-warning">DOWNVOTE</button>
                   <button (click)='deleteQuote($event,i)'class="btn btn-outline-danger">DELETE</button>
             </ul>
         </div>
