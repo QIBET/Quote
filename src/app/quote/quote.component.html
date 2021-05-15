@@ -9,16 +9,16 @@
               <label>Qoute:</label><h3>{{qoute.message}}</h3>
               <label>Publisher:</label><p>{{qoute.name}} </p>
               <label>Author:</label> <p>{{qoute.author}} </p>
-              <!--       <label>Date Published</label><p>{{qoute.publishDate}} </p>
-              -->   
-                  <button>UPVOTE</button>
-                  <button >DOWNVOTE</button>
+              <label>Date Published</label><p>{{qoute.publishDate}} </p>
+              
+                  <button class="btn btn-outline-info">UPVOTE</button>
+                  <button class="btn btn-outline-secondary">DOWNVOTE</button>
                   <button (click)='deleteQuote($event,i)'class="btn btn-outline-danger">DELETE</button>
             </ul>
         </div>
       </div>
       <div class="col-md-6">
-        <app-quote-form></app-quote-form>
+        <app-quote-form (addGoal)="addNewQuote($event)"></app-quote-form>
       </div>
     </div>
       

@@ -1,31 +1,42 @@
 <div class="container-fluid">
     <h2 class="text-center">CREATE NEW QUOTE</h2>
     <hr>
-    <form>
-        <div class="form-group">
-  
-            <label for="name">Publisher Name</label>
-            <input type="text" required class="form-control" id="name">
-            
-        </div>
-        <div class="form-group">
-  
-            <label for="message">Quote</label>
-            <input type="text" required class="form-control" id="message">
-            
-        </div>
-        <div class="form-group">
-  
-            <label for="author">Author</label>
-            <input type="text" required class="form-control" id="author">
-  
-        </div>
-        <div class="form-group">
-            <label for="publishDate">Date Published</label>
-            <input type='date' id="publishDate" required>
-  
-        </div>
-    </form>
-  </div>
+        <form (ngSubmit)='postQuote()' #quoteForm='ngForm'>
+            <div class="form-group">
+    
+                <label for="name">Publisher Name</label>
+                <input type="text" class="form-control" id="name"[(ngModel)]="newQuote.name" name="name" #name='ngModel' required>
+                <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                 <p>Name is required</p>
+                </div>
+           </div>
+            <div class="form-group">
+    
+                <label for="message">Quote</label>
+                <input type="text" class="form-control" id="message"[(ngModel)]="newQuote.message" name="message" #message='ngModel' required>
+                    <div [hidden]="message.valid || message.pristine" class="alert alert-danger">
+                      <p>Quote is required</p>
+                    </div>
+            </div>
+            <div class="form-group">
+    
+                <label for="author">Author</label>
+                <input type="text" required class="form-control" id="author"[(ngModel)]="newQuote.author" name="author" #author='ngModel' required>
+                <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+                    <p>Author is required</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="publishDate">Date Published</label>
+                <input type='date' id="publishDate" required>
+                 <div [hidden]="publishDate.valid || publishDate.pristine" class="alert alert-danger">
+                    <p>Date is required</p>
+                 </div>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-success">Add Quote</button>
+            </div>
+        </form>
+</div>
   
   

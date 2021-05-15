@@ -8,8 +8,8 @@ import {Quote} from '../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes: Quote[] = [
-    new Quote('Jesse','Kobe bryant','If you work hard enough, Dreams do come true'),
-    new Quote('Benard','Barrack Obama','Yes we Can'),
+    new Quote('Jesse','Kobe bryant','If you work hard enough, Dreams do come true',new Date(2020,3,14)),
+    new Quote('Benard','Barrack Obama','Yes we Can',new Date(2020,9,4)),
     
     ]
     addNewQuote(quote: any){
