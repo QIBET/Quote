@@ -2,7 +2,11 @@
 <hr>
   <ul>
       <li *ngFor='let qoute of quotes'>
-    {{qoute.name}} 
+    <label>Qoute:</label><h3>{{qoute.message}}</h3>
+    <label>Publisher:</label><p>{{qoute.name}} </p>
+   <label>Author:</label> <p>{{qoute.author}} </p>
+   
+    <label>Date Published</label><p>{{qoute.date}} </p>
       </li>
   </ul>
 <!-- <div class="container">
