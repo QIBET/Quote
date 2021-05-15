@@ -6,15 +6,14 @@
       <div class="col-md-6">
         <div *ngFor='let qoute of quotes;let i = index'>
             <ul>
-      
               <label>Qoute:</label><h3>{{qoute.message}}</h3>
               <label>Publisher:</label><p>{{qoute.name}} </p>
               <label>Author:</label> <p>{{qoute.author}} </p>
               <!--       <label>Date Published</label><p>{{qoute.publishDate}} </p>
-              -->   <button (click)='deleteQuote($event,i)'class="btn btn-outline-danger">DELETE</button>
+              -->   
                   <button>UPVOTE</button>
                   <button >DOWNVOTE</button>
-            <!--  <app-quote-detail *ngIf='goal.showDescription' [goal]='goal' (isComplete) = 'completeGoal($event,i)'></app-quote-detail> -->
+                  <button (click)='deleteQuote($event,i)'class="btn btn-outline-danger">DELETE</button>
             </ul>
         </div>
       </div>
