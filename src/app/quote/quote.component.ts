@@ -8,13 +8,25 @@ import {Quote} from '../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes: Quote[] = [
-    { name: 'benard',author: 'Kobe Bryant',message: 'If you work hard enough, Dreams do come true',date: '5/5/2021'},
-    { name: 'jesse',author: 'Obama',message: 'Yes we can, Dreams do come true',date: '10/5/1965'},
-    { name: 'chepkwony',author: 'Martin Luther',message: 'I have a dream',date: '2/5/1890'},
+    new Quote('Jesse','Kobe bryant','If you work hard enough, Dreams do come true'),
+    new Quote('Benard','Barrack Obama','Yes we Can'),
     
- 
- 
-   ]
+    ]
+    addNewQuote(quote: any){
+      let quoteLength = this.quotes.length;
+      quote.id = quoteLength+1;
+      quote.completeDate = new Date(quote.completeDate)
+      this.quotes.push(quote)
+    }
+    deleteQuote(isComplete: any, index: any){
+      if (isComplete) {
+        let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}?`)
+  
+        if (toDelete){
+          this.quotes.splice(index,1)
+        }
+      }
+    }
 
   constructor() { }
 

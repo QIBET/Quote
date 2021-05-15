@@ -1,13 +1,14 @@
 <h1>My Qoute</h1>
 <hr>
   <ul>
-      <li *ngFor='let qoute of quotes'>
-    <label>Qoute:</label><h3>{{qoute.message}}</h3>
-    <label>Publisher:</label><p>{{qoute.name}} </p>
-   <label>Author:</label> <p>{{qoute.author}} </p>
-   
-    <label>Date Published</label><p>{{qoute.date}} </p>
-      </li>
+    <div *ngFor='let qoute of quotes;let i = index'>
+      <label>Qoute:</label><h3>{{qoute.message}}</h3>
+      <label>Publisher:</label><p>{{qoute.name}} </p>
+      <label>Author:</label> <p>{{qoute.author}} </p>
+      <label>Date Published</label><p>{{qoute.publishDate}} </p>
+      <button (click)='deleteQuote()'>DELETE</button>
+      <app-quote-detail *ngIf='goal.showDescription' [goal]='goal' (isComplete) = 'completeGoal($event,i)'></app-quote-detail>
+    </div>
   </ul>
 <!-- <div class="container">
     <h1>Quotes</h1>
