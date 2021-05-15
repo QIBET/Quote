@@ -27,8 +27,8 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="publishDate">Date Published</label>
-                <input type='date' id="publishDate" required>
+                <label for="publish">Date Published</label>
+                <input type='date' id="publish" [(ngModel)]="newQuote.publishDate" name="publishDate" #publishDate="ngModel" required>
                  <div [hidden]="publishDate.valid || publishDate.pristine" class="alert alert-danger">
                     <p>Date is required</p>
                  </div>
