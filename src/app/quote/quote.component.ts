@@ -8,8 +8,8 @@ import {Quote} from '../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes: Quote[] = [
-    new Quote('Jesse','Kobe bryant','If you work hard enough, Dreams do come true',new Date(2020,3,14),0,0),
-    new Quote('Benard','Barrack Obama','Yes we Can',new Date(2020,9,4),0,0),
+    new Quote('Jesse','Kobe bryant','If you work hard enough, Dreams do come true',0,0,new Date(2020,3,14)),
+    new Quote('Benard','Barrack Obama','Yes we Can',0,0,new Date(2020,9,4)),
     
     ]
     
@@ -28,8 +28,7 @@ export class QuoteComponent implements OnInit {
         }
       }
     }
-    upVote = 0;
-    downVote = 0;
+
     upvote(i:number) {
       this.quotes[i].upVote ++;
     }
