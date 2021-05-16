@@ -1,3 +1,8 @@
+<style>
+  h1{
+    color: blue;
+  }
+</style>
 <div class="container">
     <h1>Quotes</h1>
     <hr>
@@ -10,12 +15,13 @@
               <label>Publisher: </label>{{qoute.name}} <br>
               <label>Author:</label>{{qoute.author}}<br>
               <label>Date Published: </label>{{qoute.publishDate|date}} <br>
-              <p></p>
+              <p>Upvote : {{uvotes}}</p>
+              <p>Downvote: {{dvotes}}</p>
               <!-- <p *ngIf="highestUpvote()===quote.upvotes && quote.upvotes>0">{{quote.message}}</p>
               <p *ngIf="highestUpvote()!==quote.upvotes || quote.upvotes===0">{{quote.message}}></p>   -->
               <p>This quote was published {{qoute.publishDate|dateCount}} days ago</p>            
-                  <button class="btn btn-outline-info" (click)="upvote(i)">UPVOTE : {{uvotes}}</button>
-                  <button class="btn btn-outline-warning" (click)='downvote(i)'>DOWNVOTE : {{dvotes}}</button>
+                  <button class="btn btn-outline-info" (click)="upvote()">UPVOTE </button>
+                  <button class="btn btn-outline-warning" (click)='downvote()'>DOWNVOTE </button>
                   <button (click)='deleteQuote($event,i)'class="btn btn-outline-danger">DELETE</button>
             </ul>
         </div>

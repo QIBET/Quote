@@ -31,14 +31,13 @@ export class QuoteComponent implements OnInit {
     }
     uvotes = 0;
     dvotes = 0;
-    i = 0;
-    upvote(i:number) {
-      this.uvotes = i + 1;
+    upvote() {
+      this.uvotes = this.uvotes + 1;
     }
-    downvote(i:number) {
-      this.dvotes = i +1;
+    downvote() {
+      this.dvotes = this.dvotes +1
     }
-   /*  preNum:number|any;
+    preNum:number|any;
     lastNum:number|any;
     counter:number|any;
 
@@ -51,7 +50,7 @@ export class QuoteComponent implements OnInit {
       if(this.lastNum > this.preNum){this.preNum = this.lastNum}
     }
     return  this.preNum
-  } */
+  }
 
   constructor() { }
 
