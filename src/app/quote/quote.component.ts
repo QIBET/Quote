@@ -13,6 +13,7 @@ export class QuoteComponent implements OnInit {
     
     ]
     
+    
     addNewQuote(quote: any){
       let quoteLength = this.quotes.length;
       quote.id = quoteLength+1;
@@ -28,14 +29,16 @@ export class QuoteComponent implements OnInit {
         }
       }
     }
-
+    uvotes = 0;
+    dvotes = 0;
+    i = 0;
     upvote(i:number) {
-      this.quotes[i].upVote ++;
+      this.uvotes = i + 1;
     }
     downvote(i:number) {
-      this.quotes[i].downVote  ++;
+      this.dvotes = i +1;
     }
-    preNum:number|any;
+   /*  preNum:number|any;
     lastNum:number|any;
     counter:number|any;
 
@@ -48,7 +51,7 @@ export class QuoteComponent implements OnInit {
       if(this.lastNum > this.preNum){this.preNum = this.lastNum}
     }
     return  this.preNum
-  }
+  } */
 
   constructor() { }
 
