@@ -1,10 +1,11 @@
 # Quote
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.12.
+Author: Kibet Ngetich Bernard
+Date: 16th May, 2021.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Description
+This allows one to view quotes and vote to the affirmative or contrary. It also allows a user to create a quote.
 
 ## Code scaffolding
 

@@ -32,10 +32,10 @@ export class QuoteComponent implements OnInit {
     uvotes = 0;
     dvotes = 0;
     upvote() {
-      this.uvotes = this.uvotes + 1;
+      this.uvotes =+ 1;
     }
     downvote() {
-      this.dvotes = this.dvotes +1
+      this.dvotes =+1
     }
     preNum:number|any;
     lastNum:number|any;
