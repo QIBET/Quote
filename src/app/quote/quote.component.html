@@ -1,41 +1,13 @@
-<!-- <style>
-  h1{
-    color: blue;
-  }
-</style>
-<div class="container">
-    <h1>Quotes</h1>
-    <hr>
-  
-    <div class="row">
-      <div class="col-md-6">
-        <div *ngFor='let quote of quotes;let i = index'>
-          <div>
-            <h6 id={{i}} appStrikethrough>{{goal.name}} due on {{goal.completeDate|date|uppercase}}</h6>
-            <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
-          </div>
-            <ul>
-              <label id="label">Quote:</label> <h5>{{quote.message}}</h5>
-              <label id="label">Publisher: </label>{{quote.name}} <br>
-              <label id="label">Author:</label>{{quote.author}}<br>
-              <label id="label"> Date Published: </label>{{quote.publishDate|date}} <br>
-              <p >Upvote : {{quote.upvote}}</p>
-              <p>Downvote: {{quote.downvote}}</p>
-               <p *ngIf="highestUpvote()===quote.upvotes && quote.upvotes>0">{{quote.message}}</p>
-              <p *ngIf="highestUpvote()!==quote.upvotes || quote.upvotes===0">{{quote.message}}></p>   -->
-              <!-- <p>This quote was published {{quote.publishDate|dateCount}} days ago</p>            
-                  <button class="btn btn-outline-info" (click)="upvote()">UPVOTE </button>
-                  <button class="btn btn-outline-warning" (click)='downvote()'>DOWNVOTE </button>
-                  <button (click)='deleteQuote($event,i)'class="btn btn-outline-danger">DELETE</button>
-            </ul>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
-      </div>
-    </div>
-      
-</div> --> 
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+       
+        <title>QUOTES</title>
+    </head>
+    <body>
+        
 <div class="container">
   <h1>QUOTES</h1>
   <hr>
@@ -43,10 +15,11 @@
   <div class="row">
     <div class="col-md-6">
       <div *ngFor='let quote of quotes;let i = index'>
+        
         <div>
           <label id="label">Quote:</label><h6  appHighlighQuote>{{quote.message}}</h6>
           <label id="label"> Date Published: </label>  {{quote.publishDate|date}}<br>
-          <button (click)='toggleDetails(i)' class="btn btn-primary">Quote Details</button>
+          <button (click)='toggleDetails(i)' class="btn btn-success">Show Quote Details</button>
         </div>
 
         <div *ngIf='quote.showDescription'>
@@ -58,5 +31,6 @@
       <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
     </div>
   </div>
-
 </div>
+</body>
+</html>

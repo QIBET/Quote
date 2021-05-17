@@ -1,9 +1,10 @@
 
-<label id="label">Author:</label>{{quote.author}}<br>
-<label id="label">Publisher: </label>{{quote.name}} <br>
-<p >Upvote : {{quote.upvote}}</p>
-<p>Downvote: {{quote.downvote}}</p>
-<p>This quote was published {{quote.publishDate|dateCount}} days ago</p>    
-<button class="btn btn-outline-info" (click)="upVote()">UPVOTE </button>
-<button class="btn btn-outline-warning" (click)='downVote()'>DOWNVOTE </button>
-<button (click)= 'quoteDelete(true)' class="btn btn-outline-danger">DELETE</button>
+         <label id="label">Author:</label>{{quote.author}}<br>
+        <label id="label">Publisher: </label>{{quote.name}} <br>
+        <p >Upvote : {{quote.upvote}}</p>
+        <p>Downvote: {{quote.downvote}}</p>
+        <p>This quote was published {{quote.publishDate|dateCount}} days ago</p>    
+        <button id="mb20" class="btn btn-success" (click)="upVote()">UPVOTE </button>
+        <button id="mb20" class="btn btn-outline-warning" (click)='downVote()'>DOWNVOTE </button>
+        <button id="mb20" (click)= 'quoteDelete(true)' class="btn btn-outline-danger">DELETE</button>
+   
