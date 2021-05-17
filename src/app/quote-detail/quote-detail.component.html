@@ -1,6 +1,9 @@
 
 <label id="label">Author:</label>{{quote.author}}<br>
 <label id="label">Publisher: </label>{{quote.name}} <br>
+<p >Upvote : {{quote.upvote}}</p>
+<p>Downvote: {{quote.downvote}}</p>
 <p>This quote was published {{quote.publishDate|dateCount}} days ago</p>    
-<!-- <p>This goal will be complete in {{quote.completeDate|dateCount}} days.</p> -->
+<button class="btn btn-outline-info" (click)="upVote()">UPVOTE </button>
+<button class="btn btn-outline-warning" (click)='downVote()'>DOWNVOTE </button>
 <button (click)= 'quoteDelete(true)' class="btn btn-outline-danger">DELETE</button>

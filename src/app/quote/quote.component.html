@@ -44,7 +44,7 @@
     <div class="col-md-6">
       <div *ngFor='let quote of quotes;let i = index'>
         <div>
-          <label id="label">Quote:</label><h6 id={{i}} appHighlighQuote>{{quote.message}}</h6>
+          <label id="label">Quote:</label><h6  appHighlighQuote>{{quote.message}}</h6>
           <label id="label"> Date Published: </label>  {{quote.publishDate|date}}<br>
           <button (click)='toggleDetails(i)' class="btn btn-primary">Quote Details</button>
         </div>
@@ -58,5 +58,5 @@
       <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
     </div>
   </div>
-  <!-- <p *ngIf='goals.length > 5'>You have too many goals</p> -->
+
 </div>
