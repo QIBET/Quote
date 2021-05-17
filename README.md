@@ -5,7 +5,7 @@ Author: Kibet Ngetich Bernard
 Date: 16th May, 2021.
 
 ## Description
-This allows one to view quotes and vote to the affirmative or contrary. It also allows a user to create a quote.
+This allows one to view quotes and vote to the affirmative or contrary. It also allows a user to create or delete a quote. 
 
 ## Code scaffolding
 

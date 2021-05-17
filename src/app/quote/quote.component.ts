@@ -8,11 +8,19 @@ import {Quote} from '../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes: Quote[] = [
-    new Quote('Jesse','Kobe bryant','If you work hard enough, Dreams do come true',0,0,new Date(2020,3,14)),
-    new Quote('Benard','Barrack Obama','Yes we Can',0,0,new Date(2020,9,4)),
+    new Quote('Jesse','Albert Einstein',' “If you want to live a happy life, tie it to a goal, not to people or things.”',0,0,new Date(1988,3,14)),
+    new Quote('Benard','Kobe Bryant','“Everything negative – pressure, challenges – is all an opportunity for me to rise.”',0,0,new Date(2020,9,4)),
     
     ]
+    toggleDetails(index:any){
+      this.quotes[index].showDescription = !this.quotes[index].showDescription;
+    }
     
+    completeQuote(isComplete: any, index: any){
+      if (isComplete) {
+        this.quotes.splice(index,1);
+      }
+    }
     
     addNewQuote(quote: any){
       let quoteLength = this.quotes.length;
@@ -29,15 +37,14 @@ export class QuoteComponent implements OnInit {
         }
       }
     }
-    uvotes = 0;
-    dvotes = 0;
-    upvote() {
-      this.uvotes =+ 1;
+   
+   /*  upvote() {
+      this.quotes.upvote += 1;
     }
     downvote() {
-      this.dvotes =+1
-    }
-    preNum:number|any;
+      this.quotes.downvote +=1;
+    } */
+   /*  preNum:number|any;
     lastNum:number|any;
     counter:number|any;
 
@@ -50,7 +57,7 @@ export class QuoteComponent implements OnInit {
       if(this.lastNum > this.preNum){this.preNum = this.lastNum}
     }
     return  this.preNum
-  }
+  } */
 
   constructor() { }
 
